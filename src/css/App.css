@@ -1,5 +1,27 @@
-.d-inline-block{
-    margin-left: 60px;
-    height: 60px;
-    padding-bottom: 10px;
+.d-inline-block {
+	margin-left: 60px;
+	height: 60px;
+	padding-bottom: 10px;
+}
+
+.navbar {
+	box-shadow: -1px -1px 25px black;
+}
+
+h4 {
+	color: rgb(119, 115, 115);
+	padding-bottom: 25px;
+}
+
+.table {
+	border: black solid 3px;
+}
+
+.table thead {
+	border: black solid 3px;
+}
+
+.table thead tr th {
+	color: black;
+	font-size: 17px;
 }
