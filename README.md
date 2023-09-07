@@ -1,6 +1,6 @@
 # GCP-Progress
 
-[![GDSC-NFSU](https://pbs.twimg.com/profile_banners/1570753275510788101/1663331971/1500x500)](https://gdsc.community.dev/ajeenkya-dy-patil-university-pune/)
+[![GDSC-NFSU](https://raw.githubusercontent.com/Trident09/gcp-progress/main/src/assets/NFSU-Banner.png)](https://gdsc.community.dev/national-forensic-sciences-university-delhi/)
 
 # Google Developers Student Club - National Forensic Sciences University
 
