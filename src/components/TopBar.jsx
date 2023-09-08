@@ -1,4 +1,5 @@
 import React from "react";
+import { Date } from "../assets/data";
 
 function TopBar() {
 	return (
@@ -10,16 +11,23 @@ function TopBar() {
 					alt="cloud"
 				/>
 				<div className="h-full p-4 pl-0">
-					<span> Google Cloud&nbsp;</span>
+					<span className="text-2xl"> Google Cloud&nbsp;</span>
 					<b>
-						<span class="study"> STUDY </span>
-						<span class="jams"> JAMS </span>
-						<span class="num23"> 23 </span>
-						<span class="sym-"> - </span>
-						<span class="num24"> 24 </span>
+						<span class="text-3xl"> STUDY JAMS 23 - 24 </span>
 					</b>
 				</div>
 			</h4>
+			<div className="flex flex-row justify-center items-center mb-5">
+				<span className="text-xl text-stone-800">
+					Last Updated on :&nbsp;
+				</span>
+				<span className="text-xl text-stone-800"> {Date} </span>
+			</div>
+			<div className="alert-slider w-[70%] m-auto mt-6 mb-0 bg-blue-300 text-red-600 rounded-3xl">
+				<marquee className="text-lg pt-2">
+					The score will be updated every day between 6 p.m and 8 p.m
+				</marquee>
+			</div>
 		</div>
 	);
 }
