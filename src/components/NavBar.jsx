@@ -2,7 +2,7 @@ import { React } from "react";
 
 const NavBar = () => {
 	return (
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<nav class="fixed navbar navbar-expand-lg navbar-light bg-light w-full z-50">
 			<div class="container-fluid">
 				<a href="https://gdsc.community.dev/national-forensic-sciences-university-delhi/">
 					<img

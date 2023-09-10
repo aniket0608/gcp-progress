@@ -19,7 +19,7 @@ export default function Layout() {
 	) : (
 		<body>
 			<NavBar />
-			<main className="pt-20">
+			<main className="pt-20 min-h-[95vh]">
 				<Outlet />
 			</main>
 			<Footer />

@@ -17,7 +17,7 @@ function DataTable() {
 		<>
 			<div className="w-full flex justify-center items-center pt-4">
 				<input
-				className="w-[80%] h-10 p-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-blue-500 text-lg"
+					className="w-[80%] h-10 p-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-blue-500 text-lg"
 					type="text"
 					onChange={handleSearch}
 					placeholder="Search by name..."
