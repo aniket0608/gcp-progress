@@ -23,10 +23,10 @@ function TopBar() {
 				</span>
 				<span className="text-xl text-stone-800"> {Date} </span>
 			</div>
-			<div className="alert-slider w-[70%] m-auto mt-6 mb-0 bg-blue-300 text-red-600 rounded-3xl">
-				<marquee className="text-lg pt-2">
+			<div className="alert-slider w-[60%] m-auto mt-6 mb-0 bg-blue-100 text-red-600 rounded-3xl flex items-center overflow-hidden">
+				<p className="text-lg p-2 marquee">
 					The score will be updated every day between 6 p.m and 8 p.m
-				</marquee>
+				</p>
 			</div>
 		</div>
 	);

@@ -30,20 +30,32 @@ function DataTable() {
 				</thead>
 				<tbody id="gccp_body">
 					{DataCompletes.map((datacomplete) => (
-						<tr>
+						<tr
+							className={
+								datacomplete[
+									"Total Completions of both Pathways"
+								] === "Yes"
+									? "bg-green-200"
+									: ""
+							}
+						>
 							<th scope="row">{datacomplete["Sl no."]}</th>
 							<td>{datacomplete["Student Name"]}</td>
 							<td>{datacomplete["# of Courses Completed"]}</td>
 							{/* <td>{datacomplete['# of Skill Badges Completed']}</td> */}
 							<td>{datacomplete["# of GenAI Game Completed"]}</td>
 							<td>
-								{
-									datacomplete[
-										"Total Completions of both Pathways"
-									]
-								}
+								{datacomplete[
+									"Total Completions of both Pathways"
+								] === "Yes"
+									? "✅"
+									: "❌"}
 							</td>
-							<td>{datacomplete["Redemption Status"]}</td>
+							<td>
+								{datacomplete["Redemption Status"] === "Yes"
+									? "✅"
+									: "❗️"}
+							</td>
 						</tr>
 					))}
 				</tbody>
