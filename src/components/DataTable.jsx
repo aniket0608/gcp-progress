@@ -28,20 +28,22 @@ function DataTable() {
 					<thead>
 						<tr>
 							<th scope="col">
-								<b>Sr. No.</b>
+								<b>#</b>
 							</th>
 							<th scope="col">
 								<b>Name</b>
 							</th>
 							<th scope="col">
-								<b>Course Completed</b>
-							</th>
-							{/* <th scope="col"><b>Skill Badge</b></th> */}
-							<th scope="col">
-								<b>Gen AI Completed</b>
+								<b>Course</b>
 							</th>
 							<th scope="col">
-								<b>Path Completed</b>
+								<b>Skill</b>
+							</th>
+							<th scope="col">
+								<b>Gen AI</b>
+							</th>
+							<th scope="col">
+								<b>Totality</b>
 							</th>
 							<th scope="col">
 								<b>Redemption</b>
@@ -59,23 +61,23 @@ function DataTable() {
 										: ""
 								}
 							>
-								<th scope="row">{datacomplete["Sl no."]}</th>
-								<td>{datacomplete["Student Name"]}</td>
-								<td>
+								<td className="whitespace-nowrap">{datacomplete["Sl no."]}</td>
+								<td className="whitespace-nowrap">{datacomplete["Student Name"]}</td>
+								<td className="whitespace-nowrap">
 									{datacomplete["# of Courses Completed"]}
 								</td>
-								{/* <td>{datacomplete['# of Skill Badges Completed']}</td> */}
-								<td>
+								<td className="whitespace-nowrap">{datacomplete['# of Skill Badges Completed']}</td>
+								<td className="whitespace-nowrap">
 									{datacomplete["# of GenAI Game Completed"]}
 								</td>
-								<td>
+								<td className="whitespace-nowrap">
 									{datacomplete[
 										"Total Completions of both Pathways"
 									] === "Yes"
 										? "✅"
 										: "❌"}
 								</td>
-								<td>
+								<td className="whitespace-nowrap">
 									{datacomplete["Redemption Status"] === "Yes"
 										? "☑️"
 										: "❗️"}
