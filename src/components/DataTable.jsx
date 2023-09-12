@@ -77,7 +77,7 @@ function DataTable() {
 								</td>
 								<td>
 									{datacomplete["Redemption Status"] === "Yes"
-										? "✅"
+										? "☑️"
 										: "❗️"}
 								</td>
 							</tr>
