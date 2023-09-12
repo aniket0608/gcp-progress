@@ -61,12 +61,22 @@ function DataTable() {
 										: ""
 								}
 							>
-								<td className="whitespace-nowrap">{datacomplete["Sl no."]}</td>
-								<td className="whitespace-nowrap">{datacomplete["Student Name"]}</td>
+								<td className="whitespace-nowrap">
+									{datacomplete["Sl no."]}
+								</td>
+								<td className="whitespace-nowrap">
+									{datacomplete["Student Name"]}
+								</td>
 								<td className="whitespace-nowrap">
 									{datacomplete["# of Courses Completed"]}
 								</td>
-								<td className="whitespace-nowrap">{datacomplete['# of Skill Badges Completed']}</td>
+								<td className="whitespace-nowrap">
+									{
+										datacomplete[
+											"# of Skill Badges Completed"
+										]
+									}
+								</td>
 								<td className="whitespace-nowrap">
 									{datacomplete["# of GenAI Game Completed"]}
 								</td>
