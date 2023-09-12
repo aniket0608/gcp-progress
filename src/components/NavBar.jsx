@@ -2,8 +2,8 @@ import { React } from "react";
 
 const NavBar = () => {
 	return (
-		<nav class="fixed navbar navbar-expand-lg navbar-light bg-light w-full z-50">
-			<div class="container-fluid">
+		<nav className="fixed navbar navbar-expand-lg navbar-light bg-light w-full z-50">
+			<div className="container-fluid">
 				<a href="https://gdsc.community.dev/national-forensic-sciences-university-delhi/">
 					<img
 						className="d-inline-block align-text-top"

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { DataCompletes } from "../assets/data";
+// import Count from "./Count";
 
 function DataTable() {
 	const [searchTerm, setSearchTerm] = useState("");
@@ -10,11 +11,18 @@ function DataTable() {
 		setSearchTerm(event.target.value);
 	};
 
-	const handleTotalCompletionClick = () =>
+	const handleTotalCompletionClick = () => {
 		setTotalCompletionFilter(!totalCompletionFilter);
-	const handleRedemptionStatusClick = () =>
+		if (redemptionStatusFilter) {
+			setRedemptionStatusFilter(!redemptionStatusFilter);
+		}
+	};
+	const handleRedemptionStatusClick = () => {
 		setRedemptionStatusFilter(!redemptionStatusFilter);
-
+		if (totalCompletionFilter) {
+			setTotalCompletionFilter(!totalCompletionFilter);
+		}
+	};
 	let filteredData = DataCompletes.filter((datacomplete) =>
 		datacomplete["Student Name"]
 			.toLowerCase()
@@ -49,7 +57,7 @@ function DataTable() {
 			<div className="w-full flex justify-center items-center pt-4 py-2 flex-row">
 				<div class="buttons flex justify-around top-5 left-5">
 					<button
-						class="btn text-black"
+						className="btn text-black"
 						onClick={handleRedemptionStatusClick}
 					>
 						<span className="w-full h-full absolute left-0 top-0 m-0 p-0 z-[1]"></span>
@@ -61,9 +69,9 @@ function DataTable() {
 						></p>
 					</button>
 				</div>
-				<div class="buttons flex justify-around top-5 left-5">
+				<div className="buttons flex justify-around top-5 left-5">
 					<button
-						class="btn text-black"
+						className="btn text-black"
 						onClick={handleTotalCompletionClick}
 					>
 						<span className="w-full h-full absolute left-0 top-0 m-0 p-0 z-[1]"></span>
@@ -76,8 +84,9 @@ function DataTable() {
 					</button>
 				</div>
 			</div>
+			{/* <Count /> */}
 			<div className="py-5 px-0 max-w-7xl md:px-4 w-full flex items-center justify-center mx-auto">
-				<table class="table table-hover fa-border">
+				<table className="table table-hover fa-border">
 					<thead>
 						<tr>
 							<th scope="col">
