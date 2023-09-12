@@ -29,16 +29,16 @@ h4 {
 .marquee{
     padding: 24px 0;
     white-space: nowrap;
-    animation: marquee 6.5s linear infinite; /* notice the infinite */
+    animation: marquee 10.5s linear infinite;
 }
 
 .marquee:after{
-    content: " The score will be updated every day between 6 p.m and 8 p.m";
+    content: " : The score will be updated every day between 6 p.m and 8 p.m";
 }
 
 @keyframes marquee{
     0% {
-        transform: translateX(0)
+        transform: translateX(100%)
     }
     100% {
         transform: translateX(-100%)
