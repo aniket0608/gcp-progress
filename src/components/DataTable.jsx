@@ -6,6 +6,7 @@ function DataTable() {
 	const [searchTerm, setSearchTerm] = useState("");
 	const [totalCompletionFilter, setTotalCompletionFilter] = useState(false);
 	const [redemptionStatusFilter, setRedemptionStatusFilter] = useState(false);
+	const [nonRedemptionFilter, setNonRedemptionFilter] = useState(false);
 
 	const handleSearch = (event) => {
 		setSearchTerm(event.target.value);
@@ -16,13 +17,29 @@ function DataTable() {
 		if (redemptionStatusFilter) {
 			setRedemptionStatusFilter(!redemptionStatusFilter);
 		}
+		if (nonRedemptionFilter) {
+			setNonRedemptionFilter(!nonRedemptionFilter);
+		}
 	};
 	const handleRedemptionStatusClick = () => {
 		setRedemptionStatusFilter(!redemptionStatusFilter);
 		if (totalCompletionFilter) {
 			setTotalCompletionFilter(!totalCompletionFilter);
 		}
+		if (nonRedemptionFilter) {
+			setNonRedemptionFilter(!nonRedemptionFilter);
+		}
 	};
+	const handleNonRedemptionClick = () => {
+		setNonRedemptionFilter(!nonRedemptionFilter);
+		if (totalCompletionFilter) {
+			setTotalCompletionFilter(!totalCompletionFilter);
+		}
+		if (redemptionStatusFilter) {
+			setRedemptionStatusFilter(!redemptionStatusFilter);
+		}
+	};
+
 	let filteredData = DataCompletes.filter((datacomplete) =>
 		datacomplete["Student Name"]
 			.toLowerCase()
@@ -41,6 +58,13 @@ function DataTable() {
 		filteredData = filteredData.filter(
 			(dataComplete) =>
 				dataComplete["Redemption Status"].toLowerCase() === "yes"
+		);
+	}
+
+	if (nonRedemptionFilter) {
+		filteredData = filteredData.filter(
+			(dataComplete) =>
+				dataComplete["Redemption Status"].toLowerCase() === "no"
 		);
 	}
 
@@ -80,6 +104,20 @@ function DataTable() {
 							data-start="good luck!"
 							data-text="Filter"
 							data-title="Completed"
+						></p>
+					</button>
+				</div>
+				<div className="buttons flex justify-around top-5 left-5">
+					<button
+						className="btn text-black"
+						onClick={handleNonRedemptionClick}
+					>
+						<span className="w-full h-full absolute left-0 top-0 m-0 p-0 z-[1]"></span>
+						<p
+							className="after:text-black"
+							data-start="good luck!"
+							data-text="Filter"
+							data-title="Non-Redeemed"
 						></p>
 					</button>
 				</div>
