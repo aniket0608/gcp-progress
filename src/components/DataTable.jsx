@@ -113,7 +113,7 @@ function DataTable() {
 						</tr>
 					</thead>
 					<tbody id="gccp_body">
-						{filteredData.map((datacomplete) => (
+						{filteredData.map((datacomplete, index) => (
 							<tr
 								className={
 									datacomplete[
@@ -128,7 +128,7 @@ function DataTable() {
 								}
 							>
 								<td className="whitespace-nowrap">
-									{datacomplete["Sl no."]}
+									{index + 1}
 								</td>
 								<td className="whitespace-nowrap">
 									{datacomplete["Student Name"]}
