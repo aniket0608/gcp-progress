@@ -120,6 +120,10 @@ function DataTable() {
 										"Total Completions of both Pathways"
 									] === "Yes"
 										? "bg-green-200"
+										: "" ||
+										  datacomplete["Redemption Status"] ===
+												"No"
+										? "bg-red-50"
 										: ""
 								}
 							>
