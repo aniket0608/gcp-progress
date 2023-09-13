@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { DataCompletes } from "../assets/data";
-// import Count from "./Count";
+import Count from "./Count";
 
 function DataTable() {
 	const [searchTerm, setSearchTerm] = useState("");
@@ -84,7 +84,7 @@ function DataTable() {
 					</button>
 				</div>
 			</div>
-			{/* <Count /> */}
+			<Count />
 			<div className="py-5 px-0 max-w-7xl md:px-4 w-full flex items-center justify-center mx-auto">
 				<table className="table table-hover fa-border">
 					<thead>
