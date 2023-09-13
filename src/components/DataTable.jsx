@@ -133,19 +133,34 @@ function DataTable() {
 							<th scope="col">
 								<b>Name</b>
 							</th>
-							<th scope="col" className="text-center">
+							<th
+								scope="col"
+								className="text-center"
+							>
 								<b>Courses</b>
 							</th>
-							<th scope="col" className="text-center">
+							<th
+								scope="col"
+								className="text-center"
+							>
 								<b>Skill</b>
 							</th>
-							<th scope="col" className="text-center">
+							<th
+								scope="col"
+								className="text-center"
+							>
 								<b>Gen AI</b>
 							</th>
-							<th scope="col" className="text-center">
+							<th
+								scope="col"
+								className="text-center"
+							>
 								<b>Totality</b>
 							</th>
-							<th scope="col" className="text-center">
+							<th
+								scope="col"
+								className="text-center"
+							>
 								<b>Redemption</b>
 							</th>
 						</tr>
@@ -170,6 +185,13 @@ function DataTable() {
 								</td>
 								<td className="whitespace-nowrap">
 									{datacomplete["Student Name"].toUpperCase()}
+									<b>
+										{datacomplete[
+											"Total Completions of both Pathways"
+										] === "Yes"
+											? " 🏅 "
+											: ""}
+									</b>
 								</td>
 								<td className="whitespace-nowrap text-center">
 									{datacomplete["# of Courses Completed"]}
