@@ -95,19 +95,19 @@ function DataTable() {
 							<th scope="col">
 								<b>Name</b>
 							</th>
-							<th scope="col">
+							<th scope="col" className="text-center">
 								<b>Courses</b>
 							</th>
-							<th scope="col">
+							<th scope="col" className="text-center">
 								<b>Skill</b>
 							</th>
-							<th scope="col">
+							<th scope="col" className="text-center">
 								<b>Gen AI</b>
 							</th>
-							<th scope="col">
+							<th scope="col" className="text-center">
 								<b>Totality</b>
 							</th>
-							<th scope="col">
+							<th scope="col" className="text-center">
 								<b>Redemption</b>
 							</th>
 						</tr>
