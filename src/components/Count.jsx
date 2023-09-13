@@ -20,12 +20,22 @@ function Count() {
 	);
 	return (
 		<div className="w-full flex justify-center items-center pt-4 py-2 flex-col">
-			<div className="w-[60%] grid grid-cols-2">
-				<p>Total Students : {DataCompletes.length}</p>
-				<p>Total Redemptions : {redeemedStudents.length}</p>
-				<p>Total GenAI Completions : {genAICompletions.length}</p>
-				<p>Total GCCF Completed : {GCCFCompletions.length}</p>
-				<p>Totality Completions : {totalCompletions.length}</p>
+			<div className="w-[80%] grid grid-cols-3 gap-2 text-normal font-semibold text-gray-700 ">
+				<p className="p-2 outline-1 outline outline-blue-700 m-2 rounded-md shadow-md">
+					Total Students : {DataCompletes.length}
+				</p>
+				<p className="p-2 outline-1 outline outline-blue-700 m-2 rounded-md shadow-md">
+					Total Redemptions : {redeemedStudents.length}
+				</p>
+				<p className="p-2 outline-1 outline outline-blue-700 m-2 rounded-md shadow-md">
+					Total GenAI Completions : {genAICompletions.length}
+				</p>
+				<p className="p-2 outline-1 outline outline-blue-700 m-2 rounded-md shadow-md">
+					Total GCCF Completions : {GCCFCompletions.length}
+				</p>
+				<p className="p-2 outline-1 outline outline-blue-700 m-2 rounded-md shadow-md">
+					Totality Completions : {totalCompletions.length}
+				</p>
 			</div>
 		</div>
 	);
