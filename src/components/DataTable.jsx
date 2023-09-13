@@ -48,7 +48,7 @@ function DataTable() {
 		<>
 			<div className="w-full flex justify-center items-center pt-4">
 				<input
-					className="w-[80%] h-10 p-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-blue-500 text-lg"
+					className="w-[80%] h-10 py-4 px-4 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-blue-500 text-lg uppercase"
 					type="text"
 					onChange={handleSearch}
 					placeholder="Search by name..."
@@ -88,7 +88,7 @@ function DataTable() {
 			<div className="py-5 px-0 max-w-7xl md:px-4 w-full flex items-center justify-center mx-auto">
 				<table className="table table-hover fa-border">
 					<thead>
-						<tr>
+						<tr className="uppercase">
 							<th scope="col">
 								<b>#</b>
 							</th>
@@ -96,7 +96,7 @@ function DataTable() {
 								<b>Name</b>
 							</th>
 							<th scope="col">
-								<b>Course</b>
+								<b>Courses</b>
 							</th>
 							<th scope="col">
 								<b>Skill</b>
@@ -131,29 +131,29 @@ function DataTable() {
 									{index + 1}
 								</td>
 								<td className="whitespace-nowrap">
-									{datacomplete["Student Name"]}
+									{datacomplete["Student Name"].toUpperCase()}
 								</td>
-								<td className="whitespace-nowrap">
+								<td className="whitespace-nowrap text-center">
 									{datacomplete["# of Courses Completed"]}
 								</td>
-								<td className="whitespace-nowrap">
+								<td className="whitespace-nowrap text-center">
 									{
 										datacomplete[
 											"# of Skill Badges Completed"
 										]
 									}
 								</td>
-								<td className="whitespace-nowrap">
+								<td className="whitespace-nowrap text-center">
 									{datacomplete["# of GenAI Game Completed"]}
 								</td>
-								<td className="whitespace-nowrap">
+								<td className="whitespace-nowrap text-center">
 									{datacomplete[
 										"Total Completions of both Pathways"
 									] === "Yes"
 										? "✅"
 										: "❌"}
 								</td>
-								<td className="whitespace-nowrap">
+								<td className="whitespace-nowrap text-center">
 									{datacomplete["Redemption Status"] === "Yes"
 										? "☑️"
 										: "❗️"}
