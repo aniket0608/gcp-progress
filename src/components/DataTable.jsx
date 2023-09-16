@@ -40,7 +40,19 @@ function DataTable() {
 		}
 	};
 
-	let filteredData = DataCompletes.filter((datacomplete) =>
+    const sortedDataCompletes = [...DataCompletes].sort((a, b) => {
+        if (a["Redemption Status"] > b["Redemption Status"]) return -1;
+        if (a["Redemption Status"] < b["Redemption Status"]) return 1;
+    
+        if (a["Total Completions of both Pathways"] > b["Total Completions of both Pathways"]) return -1;
+        if (a["Total Completions of both Pathways"] < b["Total Completions of both Pathways"]) return 1;
+    
+        const sumA = a["# of GenAI Game Completed"] + a["# of Courses Completed"] + a["# of Skill Badges Completed"];
+        const sumB = b["# of GenAI Game Completed"] + b["# of Courses Completed"] + b["# of Skill Badges Completed"];
+        return sumB - sumA;
+    });
+
+	let filteredData = sortedDataCompletes.filter((datacomplete) =>
 		datacomplete["Student Name"]
 			.toLowerCase()
 			.includes(searchTerm.toLowerCase())
